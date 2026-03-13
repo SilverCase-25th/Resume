@@ -1,0 +1,37 @@
+.resume {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+h2 {
+    color: #666;
+    font-size: 20px;
+}
+
+p {
+    color: #444;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.header,
+.footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #999;
+}
