@@ -33,12 +33,55 @@
             border-bottom: 2px solid #007BFF;
             padding-bottom: 10px;
         }
+        .project-entry {
+            margin-bottom: 20px;
+        }
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+        .project-tech {
+            color: #555;
+            font-size: 0.9em;
+            margin: 4px 0 6px;
+        }
+        .btn-download {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 22px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-download:hover {
+            background-color: #0056b3;
+        }
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            section {
+                box-shadow: none;
+                margin-bottom: 12px;
+                padding: 12px;
+            }
+            .no-print {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Javier A Flores-Rendon</h1>
         <h2>Entry-Level Software Engineer</h2>
+        <div class="no-print">
+            <button class="btn-download" onclick="window.print()">⬇ Download as PDF</button>
+        </div>
     </header>
     <section>
         <h3>Professional Summary</h3>
@@ -89,7 +132,27 @@
         <p>GPA: 3.5</p>
     </section>
     <section>
-        <h3>Skills & Experiences</h3>
+        <h3>Projects</h3>
+        <div class="project-entry">
+            <h4><a href="https://github.com/SilverCase-25th/async-task-engine" target="_blank">Async Task Engine</a></h4>
+            <p class="project-tech">Python &bull; FastAPI &bull; PostgreSQL &bull; Docker</p>
+            <ul>
+                <li>Built a REST API-based asynchronous task queue system using FastAPI and PostgreSQL, supporting task state management (queued, leased) across concurrent workers</li>
+                <li>Integrated Prometheus metrics for real-time observability and webhook callbacks for task completion notification</li>
+                <li>Containerized the full application stack with Docker and Docker Compose, enabling one-command local deployment with a PostgreSQL service and health checks</li>
+            </ul>
+        </div>
+        <div class="project-entry">
+            <h4><a href="https://github.com/SilverCase-25th/Resume" target="_blank">Resume Website</a></h4>
+            <p class="project-tech">HTML &bull; CSS &bull; JavaScript</p>
+            <ul>
+                <li>Designed and built a responsive personal resume as a static web page with semantic HTML and CSS styling</li>
+                <li>Added a client-side PDF export feature using the browser Print API, enabling one-click download without a backend</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h3>Skills &amp; Experiences</h3>
         <ul>
             <li>Python - ~3 years</li>
             <li>C++ - ~2 years</li>
