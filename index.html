@@ -13,60 +13,94 @@
         }
         header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 24px;
         }
         h1 {
-            margin: 0;
-            font-size: 2.5em;
+            margin: 0 0 4px;
+            font-size: 2.2em;
         }
-        h2 {
-            color: #666;
-            font-size: 1.5em;
+        .header-subtitle {
+            color: #555;
+            font-size: 1em;
+            margin: 0 0 8px;
+        }
+        .header-contact {
+            font-size: 0.88em;
+            color: #444;
+        }
+        .header-contact a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .header-contact span {
+            margin: 0 6px;
+            color: #bbb;
         }
         section {
             background: white;
-            padding: 20px;
+            padding: 14px 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
         h3 {
             border-bottom: 2px solid #007BFF;
-            padding-bottom: 10px;
+            padding-bottom: 6px;
+            margin: 0 0 10px;
+            font-size: 1.05em;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        h4 {
+            margin: 10px 0 2px;
+            font-size: 0.97em;
+        }
+        h4:first-of-type {
+            margin-top: 0;
+        }
+        p {
+            margin: 2px 0 6px;
+            font-size: 0.93em;
+            color: #333;
+        }
+        ul {
+            margin: 4px 0 8px;
+            padding-left: 20px;
+        }
+        li {
+            font-size: 0.91em;
+            margin-bottom: 3px;
+            color: #333;
+        }
+        .project-tech {
+            color: #555;
+            font-size: 0.88em;
+            margin: 2px 0 4px;
         }
         .project-entry {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
         .project-entry:last-child {
             margin-bottom: 0;
         }
-        .project-tech {
-            color: #555;
-            font-size: 0.9em;
-            margin: 4px 0 6px;
-        }
         .additional-exp {
-            color: #555;
-            font-size: 0.92em;
-            margin: 0;
+            color: #666;
+            font-size: 0.88em;
+            margin: 4px 0 0;
             padding-left: 0;
             list-style: none;
         }
         .additional-exp li {
-            padding: 3px 0;
-            border-bottom: 1px dotted #ddd;
-        }
-        .additional-exp li:last-child {
-            border-bottom: none;
+            padding: 2px 0;
         }
         .btn-download {
             display: inline-block;
-            margin-top: 12px;
-            padding: 10px 22px;
+            margin-top: 10px;
+            padding: 8px 20px;
             background-color: #007BFF;
             color: white;
             border: none;
             border-radius: 4px;
-            font-size: 1em;
+            font-size: 0.95em;
             cursor: pointer;
             text-decoration: none;
         }
@@ -80,8 +114,8 @@
             }
             section {
                 box-shadow: none;
-                margin-bottom: 12px;
-                padding: 12px;
+                margin-bottom: 8px;
+                padding: 8px 14px;
             }
             .no-print {
                 display: none;
@@ -92,74 +126,70 @@
 <body>
     <header>
         <h1>Javier A Flores-Rendon</h1>
-        <h2>Entry-Level Software Engineer</h2>
+        <p class="header-subtitle">Entry-Level Software Engineer</p>
+        <div class="header-contact">
+            <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a>
+            <span>|</span>
+            (602) 366-0216
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank">LinkedIn</a>
+            <span>|</span>
+            <a href="https://github.com/SilverCase-25th" target="_blank">GitHub</a>
+        </div>
         <div class="no-print">
             <button class="btn-download" onclick="window.print()">⬇ Download as PDF</button>
         </div>
     </header>
-    <section>
-        <h3>Professional Summary</h3>
-        <p>MS Computer Science graduate (GPA 3.98) with hands-on experience building backend systems in Python, C++, and JavaScript. Proficient with REST APIs, asynchronous programming, PostgreSQL, Docker, and Linux. Passionate about writing clean, well-structured code and eager to contribute to a collaborative software engineering team.</p>
-    </section>
-    <section>
-        <h3>Technical Skills</h3>
-        <ul>
-            <li><strong>Languages:</strong> Python (~3 years), C++ (~2 years), JavaScript (&gt;1 year), HTML/CSS (&gt;1 year)</li>
-            <li><strong>Frameworks &amp; Libraries:</strong> FastAPI, Pytest, Prometheus client</li>
-            <li><strong>Databases:</strong> PostgreSQL</li>
-            <li><strong>Tools &amp; Platforms:</strong> Docker, Docker Compose, Git, Ubuntu, Windows, macOS</li>
-        </ul>
-    </section>
-    <section>
-        <h3>Projects</h3>
-        <div class="project-entry">
-            <h4><a href="https://github.com/SilverCase-25th/async-task-engine" target="_blank">Async Task Engine</a></h4>
-            <p class="project-tech">Python &bull; FastAPI &bull; PostgreSQL &bull; Docker</p>
-            <ul>
-                <li>Built a REST API-based asynchronous task queue system using FastAPI and PostgreSQL, supporting task state management (queued, leased) across concurrent workers</li>
-                <li>Integrated Prometheus metrics for real-time observability and webhook callbacks for task completion notification</li>
-                <li>Containerized the full application stack with Docker and Docker Compose, enabling one-command local deployment with a PostgreSQL service and health checks</li>
-            </ul>
-        </div>
-        <div class="project-entry">
-            <h4><a href="https://github.com/SilverCase-25th/Resume" target="_blank">Resume Website</a></h4>
-            <p class="project-tech">HTML &bull; CSS &bull; JavaScript</p>
-            <ul>
-                <li>Designed and built a personal resume as a static web page with semantic HTML and CSS styling</li>
-                <li>Added a client-side PDF export feature using the browser Print API, enabling one-click download without a backend</li>
-            </ul>
-        </div>
-    </section>
+
     <section>
         <h3>Education</h3>
-        <h4>MS - Computer Science - Grand Canyon University</h4>
-        <p>April 2023 - October 2025 &mdash; GPA: 3.98</p>
-        <p style="font-size:0.92em; color:#555; margin-top:12px;">
+        <h4>MS &mdash; Computer Science &mdash; Grand Canyon University</h4>
+        <p>April 2023 – October 2025 &nbsp;&bull;&nbsp; GPA: 3.98</p>
+        <p style="font-size:0.88em; color:#666; margin-top:6px;">
             MS Forensic Psychology, Grand Canyon University (2021–2023) &nbsp;&bull;&nbsp;
             BS Justice Studies, Grand Canyon University (2019–2021)
         </p>
     </section>
+
     <section>
-        <h3>Relevant Work Experience</h3>
+        <h3>Experience</h3>
+
         <h4>IT Intern &mdash; Great Hearts Academy</h4>
         <p>October 2019 – May 2020</p>
         <ul>
             <li>Created fillable PDF forms for school staff using Adobe Acrobat, improving document workflow efficiency</li>
             <li>Troubleshot computers, printers, and other technology across campus to minimize downtime</li>
         </ul>
-        <h4 style="margin-top:18px; color:#555; font-size:0.95em;">Additional Experience</h4>
-        <ul class="additional-exp">
-            <li>Crisis Therapist &mdash; La Frontera EMPACT &nbsp;(July 2023 – Present)</li>
-            <li>Private Investigator &mdash; Allied Universal &nbsp;(January 2023 – July 2023)</li>
-            <li>Case Manager &mdash; Arizona Department of Child Safety &nbsp;(May 2022 – October 2022)</li>
-        </ul>
+
+        <div class="project-entry">
+            <h4><a href="https://github.com/SilverCase-25th/async-task-engine" target="_blank">Project: Async Task Engine</a></h4>
+            <p class="project-tech">Python &bull; FastAPI &bull; PostgreSQL &bull; Docker</p>
+            <ul>
+                <li>Built a REST API-based asynchronous task queue system with state management (queued, leased) across concurrent workers</li>
+                <li>Integrated Prometheus metrics for real-time observability and webhook callbacks for task completion</li>
+                <li>Containerized with Docker Compose, enabling one-command local deployment with PostgreSQL and health checks</li>
+            </ul>
+        </div>
+
+        <div class="project-entry">
+            <h4><a href="https://github.com/SilverCase-25th/Resume" target="_blank">Project: Resume Website</a></h4>
+            <p class="project-tech">HTML &bull; CSS &bull; JavaScript</p>
+            <ul>
+                <li>Built a personal resume as a static web page with semantic HTML, CSS, and a one-click PDF export via the browser Print API</li>
+            </ul>
+        </div>
+
+        <p style="font-size:0.87em; color:#888; margin-top:10px; margin-bottom:0;">
+            <em>Other: Crisis Therapist – La Frontera EMPACT (2023–Present) &nbsp;&bull;&nbsp; Private Investigator – Allied Universal (2023) &nbsp;&bull;&nbsp; Case Manager – AZ Dept. of Child Safety (2022)</em>
+        </p>
     </section>
+
     <section>
-        <h3>Contact Information</h3>
-        <p>Email: <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a></p>
-        <p>Phone: (602) 366-0216</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank">linkedin.com/in/javier-flores-rendon-437a43194</a></p>
-        <p>GitHub: <a href="https://github.com/SilverCase-25th" target="_blank">github.com/SilverCase-25th</a></p>
+        <h3>Skills</h3>
+        <ul>
+            <li><strong>Languages:</strong> Python (~3 yrs), C++ (~2 yrs), JavaScript (&gt;1 yr), HTML/CSS (&gt;1 yr)</li>
+            <li><strong>Frameworks &amp; Tools:</strong> FastAPI, Pytest, Prometheus, PostgreSQL, Docker, Git, Ubuntu, macOS, Windows</li>
+        </ul>
     </section>
 </body>
 </html>
