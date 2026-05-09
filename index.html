@@ -10,12 +10,12 @@
 
         body {
             font-family: Georgia, 'Times New Roman', serif;
-            font-size: 15px;
-            line-height: 1.5;
+            font-size: 14px;
+            line-height: 1.4;
             color: #1a1a1a;
             background: #e8e8e8;
             margin: 0;
-            padding: 32px 16px 48px;
+            padding: 24px 12px 32px;
         }
 
         /* ── Page wrapper ── */
@@ -23,19 +23,19 @@
             max-width: 760px;
             margin: 0 auto;
             background: #fff;
-            padding: 48px 52px 52px;
+            padding: 38px 42px 40px;
         }
 
         /* ── Header ── */
         .resume-header {
             text-align: center;
-            margin-bottom: 24px;
-            padding-bottom: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
         }
 
         .resume-header h1 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 1.9em;
+            font-size: 1.75em;
             font-weight: 700;
             letter-spacing: 0.02em;
             margin: 0 0 4px;
@@ -44,15 +44,15 @@
 
         .resume-header .title {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.93em;
+            font-size: 0.9em;
             color: #444;
-            margin: 0 0 10px;
+            margin: 0 0 8px;
             letter-spacing: 0.03em;
         }
 
         .contact-line {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.82em;
+            font-size: 0.78em;
             color: #333;
         }
 
@@ -66,23 +66,23 @@
         }
 
         .contact-line .sep {
-            margin: 0 7px;
+            margin: 0 5px;
             color: #aaa;
         }
 
         /* ── Section ── */
         section {
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .section-title {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.76em;
+            font-size: 0.73em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: #1a1a1a;
-            margin: 0 0 12px;
+            margin: 0 0 8px;
         }
 
         /* ── Entry row (title + date on same line) ── */
@@ -91,7 +91,7 @@
             justify-content: space-between;
             align-items: baseline;
             gap: 8px;
-            margin-bottom: 1px;
+            margin-bottom: 0;
         }
 
         .entry-title {
@@ -120,20 +120,20 @@
 
         .entry-sub {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.83em;
+            font-size: 0.8em;
             color: #555;
-            margin: 0 0 4px;
+            margin: 0 0 2px;
         }
 
         /* ── Bullet lists ── */
         ul {
-            margin: 4px 0 12px;
-            padding-left: 18px;
+            margin: 2px 0 8px;
+            padding-left: 16px;
         }
 
         li {
-            font-size: 0.88em;
-            margin-bottom: 3px;
+            font-size: 0.85em;
+            margin-bottom: 2px;
             color: #222;
         }
 
@@ -146,21 +146,28 @@
 
         .skills-list li {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.88em;
+            font-size: 0.84em;
             color: #222;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .skills-list strong {
             color: #1a1a1a;
         }
 
+        .summary-text {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85em;
+            color: #222;
+            margin: 0;
+        }
+
         /* ── Additional experience footnote ── */
         .footnote {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 0.80em;
+            font-size: 0.76em;
             color: #666;
-            margin-top: 8px;
+            margin-top: 6px;
         }
 
         /* ── Print button (screen only) ── */
@@ -191,12 +198,13 @@
             body {
                 background: #fff;
                 padding: 0;
-                font-size: 14px;
+                font-size: 12.5px;
+                line-height: 1.25;
             }
 
             .page {
                 max-width: 100%;
-                padding: 0.4in 0.55in 0.4in;
+                padding: 0.28in 0.4in 0.3in;
                 box-shadow: none;
             }
 
@@ -239,6 +247,12 @@
             </div>
         </header>
 
+        <!-- ── Summary ── -->
+        <section>
+            <h2 class="section-title">Summary</h2>
+            <p class="summary-text">Software engineer with hands-on backend experience building REST APIs with Python, FastAPI, PostgreSQL, and Docker. Strong foundation in data structures, algorithms, debugging, testing, and version control.</p>
+        </section>
+
         <!-- ── Education ── -->
         <section>
             <h2 class="section-title">Education</h2>
@@ -247,7 +261,7 @@
                 <span class="entry-title">M.S., Computer Science &mdash; Grand Canyon University</span>
                 <span class="entry-date">2023 – 2025</span>
             </div>
-            <p class="entry-sub">GPA: 3.98 &nbsp;&middot;&nbsp; Focus: algorithm design &amp; analysis, advanced operating systems, parallel &amp; multi-core computing, machine learning &amp; AI, computational research methods</p>
+            <p class="entry-sub">GPA: 3.98 &nbsp;&middot;&nbsp; Focus: algorithms, advanced operating systems, parallel &amp; multi-core computing, machine learning</p>
 
             <div class="entry-header" style="margin-top:8px;">
                 <span class="entry-title">M.S., Forensic Psychology &mdash; Grand Canyon University</span>
@@ -260,12 +274,7 @@
             </div>
 
             <div class="entry-header" style="margin-top:6px;">
-                <span class="entry-title">A.A., Arts &mdash; Phoenix Community College</span>
-                <span class="entry-date"></span>
-            </div>
-
-            <div class="entry-header" style="margin-top:4px;">
-                <span class="entry-title">A.S., Science &mdash; Phoenix Community College</span>
+                <span class="entry-title">A.A., Arts &amp; A.S., Science &mdash; Phoenix Community College</span>
                 <span class="entry-date"></span>
             </div>
         </section>
@@ -279,8 +288,8 @@
                 <span class="entry-date">Oct 2019 – May 2020</span>
             </div>
             <ul>
-                <li>Created fillable PDF forms for school staff using Adobe Acrobat, improving document workflow efficiency</li>
-                <li>Troubleshot computers, printers, and other technology across campus to minimize downtime</li>
+                <li>Built fillable PDF forms to standardize staff workflows and reduce manual document work</li>
+                <li>Troubleshot hardware/software issues across campus devices to maintain day-to-day operations</li>
             </ul>
 
             <div class="entry-header" style="margin-top:4px;">
@@ -289,9 +298,8 @@
             </div>
             <p class="entry-sub">Python &middot; FastAPI &middot; PostgreSQL &middot; Docker</p>
             <ul>
-                <li>Built a REST API-based asynchronous task queue with state management (queued, leased) across concurrent workers</li>
-                <li>Integrated Prometheus metrics for real-time observability and webhook callbacks for task completion</li>
-                <li>Containerized with Docker Compose for one-command local deployment with PostgreSQL and health checks</li>
+                <li>Built an asynchronous backend service with REST endpoints, task-state tracking, and worker coordination for concurrent processing</li>
+                <li>Added Prometheus metrics/webhooks and deployed with Docker Compose + PostgreSQL, including health checks</li>
             </ul>
 
             <div class="entry-header" style="margin-top:4px;">
@@ -300,19 +308,21 @@
             </div>
             <p class="entry-sub">HTML &middot; CSS &middot; JavaScript</p>
             <ul>
-                <li>Designed and built a personal resume as a static web page with semantic HTML, CSS, and one-click PDF export via the browser Print API</li>
+                <li>Built and maintained a responsive resume site with semantic HTML/CSS/JS and browser-based PDF export</li>
             </ul>
 
-            <p class="footnote">Additional: Crisis Therapist, La Frontera EMPACT (2023–Present) &nbsp;&middot;&nbsp; Private Investigator, Allied Universal (2023) &nbsp;&middot;&nbsp; Case Manager, AZ Dept. of Child Safety (2022)</p>
+            <p class="footnote">Additional Professional Experience: Crisis Therapist, La Frontera EMPACT (2023–Present) &nbsp;&middot;&nbsp; Private Investigator, Allied Universal (2023) &nbsp;&middot;&nbsp; Case Manager, AZ Dept. of Child Safety (2022)</p>
         </section>
 
         <!-- ── Skills ── -->
         <section>
             <h2 class="section-title">Skills</h2>
             <ul class="skills-list">
-                <li><strong>Languages:</strong> Python (~3 yrs), C++ (~2 yrs), JavaScript (&gt;1 yr), HTML/CSS (&gt;1 yr)</li>
-                <li><strong>Frameworks &amp; Tools:</strong> FastAPI, Pytest, Prometheus, PostgreSQL, Docker, Git</li>
-                <li><strong>Platforms:</strong> Linux (Ubuntu), macOS, Windows</li>
+                <li><strong>Programming Languages:</strong> Python (~3 yrs), C++ (~2 yrs), JavaScript (&gt;1 yr), HTML/CSS (&gt;1 yr)</li>
+                <li><strong>Backend &amp; Data:</strong> FastAPI, REST APIs, async processing, PostgreSQL</li>
+                <li><strong>Tools:</strong> Git, Docker, Pytest, Prometheus</li>
+                <li><strong>Foundations:</strong> Data structures, algorithms, debugging, testing, OOP</li>
+                <li><strong>Platforms:</strong> Linux, macOS, Windows</li>
             </ul>
         </section>
 
