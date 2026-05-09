@@ -3,199 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javier A Flores-Rendon - Resume</title>
+    <title>Javier A Flores-Rendon – Resume</title>
     <style>
+        /* ── Base ── */
+        *, *::before, *::after { box-sizing: border-box; }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #e8e8e8;
             margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
+            padding: 32px 16px 48px;
         }
-        header {
+
+        /* ── Page wrapper ── */
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 48px 52px 52px;
+        }
+
+        /* ── Header ── */
+        .resume-header {
             text-align: center;
             margin-bottom: 24px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #1a1a1a;
         }
-        h1 {
+
+        .resume-header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.9em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
             margin: 0 0 4px;
-            font-size: 2.2em;
+            color: #1a1a1a;
         }
-        .header-subtitle {
-            color: #555;
-            font-size: 1em;
-            margin: 0 0 8px;
-        }
-        .header-contact {
-            font-size: 0.88em;
+
+        .resume-header .title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.93em;
             color: #444;
+            margin: 0 0 10px;
+            letter-spacing: 0.03em;
         }
-        .header-contact a {
-            color: #007BFF;
+
+        .contact-line {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.82em;
+            color: #333;
+        }
+
+        .contact-line a {
+            color: #1a1a1a;
             text-decoration: none;
         }
-        .header-contact span {
-            margin: 0 6px;
-            color: #bbb;
+
+        .contact-line a:hover {
+            text-decoration: underline;
         }
+
+        .contact-line .sep {
+            margin: 0 7px;
+            color: #aaa;
+        }
+
+        /* ── Section ── */
         section {
-            background: white;
-            padding: 14px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 14px;
+            margin-bottom: 20px;
         }
-        h3 {
-            border-bottom: 2px solid #007BFF;
-            padding-bottom: 6px;
-            margin: 0 0 10px;
-            font-size: 1.05em;
+
+        .section-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.76em;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.12em;
+            color: #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 4px;
+            margin: 0 0 12px;
         }
-        h4 {
-            margin: 10px 0 2px;
-            font-size: 0.97em;
+
+        /* ── Entry row (title + date on same line) ── */
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 1px;
         }
-        h4:first-of-type {
-            margin-top: 0;
+
+        .entry-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.92em;
+            font-weight: 700;
+            color: #1a1a1a;
         }
-        p {
-            margin: 2px 0 6px;
-            font-size: 0.93em;
-            color: #333;
+
+        .entry-title a {
+            color: #1a1a1a;
+            text-decoration: none;
         }
-        ul {
-            margin: 4px 0 8px;
-            padding-left: 20px;
+
+        .entry-title a:hover {
+            text-decoration: underline;
         }
-        li {
-            font-size: 0.91em;
-            margin-bottom: 3px;
-            color: #333;
-        }
-        .project-tech {
+
+        .entry-date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.82em;
             color: #555;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .entry-sub {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.83em;
+            color: #555;
+            margin: 0 0 4px;
+        }
+
+        /* ── Bullet lists ── */
+        ul {
+            margin: 4px 0 12px;
+            padding-left: 18px;
+        }
+
+        li {
             font-size: 0.88em;
-            margin: 2px 0 4px;
+            margin-bottom: 3px;
+            color: #222;
         }
-        .project-entry {
-            margin-bottom: 12px;
-        }
-        .project-entry:last-child {
-            margin-bottom: 0;
-        }
-        .additional-exp {
-            color: #666;
-            font-size: 0.88em;
-            margin: 4px 0 0;
-            padding-left: 0;
+
+        /* ── Skills ── */
+        .skills-list {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .additional-exp li {
-            padding: 2px 0;
+
+        .skills-list li {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.88em;
+            color: #222;
+            margin-bottom: 4px;
         }
+
+        .skills-list strong {
+            color: #1a1a1a;
+        }
+
+        /* ── Additional experience footnote ── */
+        .footnote {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.80em;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ── Print button (screen only) ── */
+        .no-print {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
         .btn-download {
             display: inline-block;
-            margin-top: 10px;
-            padding: 8px 20px;
-            background-color: #007BFF;
-            color: white;
+            padding: 7px 22px;
+            background: #1a1a1a;
+            color: #fff;
             border: none;
-            border-radius: 4px;
-            font-size: 0.95em;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.88em;
             cursor: pointer;
-            text-decoration: none;
+            letter-spacing: 0.02em;
         }
+
         .btn-download:hover {
-            background-color: #0056b3;
+            background: #444;
         }
+
+        /* ── Print ── */
         @media print {
             body {
-                background-color: white;
+                background: #fff;
                 padding: 0;
+                font-size: 14px;
             }
-            section {
+
+            .page {
+                max-width: 100%;
+                padding: 0.4in 0.55in 0.4in;
                 box-shadow: none;
-                margin-bottom: 8px;
-                padding: 8px 14px;
             }
+
             .no-print {
                 display: none;
+            }
+
+            a {
+                color: #1a1a1a !important;
+                text-decoration: none !important;
+            }
+
+            section {
+                page-break-inside: avoid;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Javier A Flores-Rendon</h1>
-        <p class="header-subtitle">Entry-Level Software Engineer</p>
-        <div class="header-contact">
-            Tempe, AZ
-            <span>|</span>
-            <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a>
-            <span>|</span>
-            (602) 366-0216
-            <span>|</span>
-            <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank">LinkedIn</a>
-            <span>|</span>
-            <a href="https://github.com/SilverCase-25th" target="_blank">GitHub</a>
-        </div>
-        <div class="no-print">
-            <button class="btn-download" onclick="window.print()">⬇ Download as PDF</button>
-        </div>
-    </header>
+    <div class="no-print">
+        <button class="btn-download" onclick="window.print()">⬇ Save as PDF</button>
+    </div>
 
-    <section>
-        <h3>Education</h3>
-        <h4>MS &mdash; Computer Science &mdash; Grand Canyon University</h4>
-        <p>April 2023 – October 2025 &nbsp;&bull;&nbsp; GPA: 3.98</p>
-        <p style="font-size:0.88em; color:#555; margin-top:2px; margin-bottom:6px;">
-            <em>Curriculum focus: algorithm design &amp; analysis, advanced operating systems, parallel/multi-core computing, machine learning &amp; AI, and computational research methods</em>
-        </p>
-        <p style="font-size:0.88em; color:#666; margin-top:6px;">
-            MS Forensic Psychology, Grand Canyon University (2021–2023) &nbsp;&bull;&nbsp;
-            BS Justice Studies, Grand Canyon University (2019–2021) &nbsp;&bull;&nbsp;
-            AS &amp; AA, Phoenix Community College
-        </p>
-    </section>
+    <div class="page">
 
-    <section>
-        <h3>Experience</h3>
+        <!-- ── Header ── -->
+        <header class="resume-header">
+            <h1>Javier A. Flores-Rendon</h1>
+            <p class="title">Software Engineer</p>
+            <div class="contact-line">
+                Tempe, AZ
+                <span class="sep">|</span>
+                <a href="mailto:javierflores789@gmail.com">javierflores789@gmail.com</a>
+                <span class="sep">|</span>
+                (602) 366-0216
+                <span class="sep">|</span>
+                <a href="https://www.linkedin.com/in/javier-flores-rendon-437a43194/" target="_blank">linkedin.com/in/javier-flores-rendon-437a43194</a>
+                <span class="sep">|</span>
+                <a href="https://github.com/SilverCase-25th" target="_blank">github.com/SilverCase-25th</a>
+            </div>
+        </header>
 
-        <h4>IT Intern &mdash; Great Hearts Academy</h4>
-        <p>October 2019 – May 2020</p>
-        <ul>
-            <li>Created fillable PDF forms for school staff using Adobe Acrobat, improving document workflow efficiency</li>
-            <li>Troubleshot computers, printers, and other technology across campus to minimize downtime</li>
-        </ul>
+        <!-- ── Education ── -->
+        <section>
+            <h2 class="section-title">Education</h2>
 
-        <div class="project-entry">
-            <h4><a href="https://github.com/SilverCase-25th/async-task-engine" target="_blank">Project: Async Task Engine</a></h4>
-            <p class="project-tech">Python &bull; FastAPI &bull; PostgreSQL &bull; Docker</p>
+            <div class="entry-header">
+                <span class="entry-title">M.S., Computer Science &mdash; Grand Canyon University</span>
+                <span class="entry-date">2023 – 2025</span>
+            </div>
+            <p class="entry-sub">GPA: 3.98 &nbsp;&middot;&nbsp; Focus: algorithm design &amp; analysis, advanced operating systems, parallel &amp; multi-core computing, machine learning &amp; AI, computational research methods</p>
+
+            <div class="entry-header" style="margin-top:8px;">
+                <span class="entry-title">M.S., Forensic Psychology &mdash; Grand Canyon University</span>
+                <span class="entry-date">2021 – 2023</span>
+            </div>
+
+            <div class="entry-header" style="margin-top:6px;">
+                <span class="entry-title">B.S., Justice Studies &mdash; Grand Canyon University</span>
+                <span class="entry-date">2019 – 2021</span>
+            </div>
+
+            <div class="entry-header" style="margin-top:6px;">
+                <span class="entry-title">A.A., Arts &mdash; Phoenix Community College</span>
+                <span class="entry-date"></span>
+            </div>
+
+            <div class="entry-header" style="margin-top:4px;">
+                <span class="entry-title">A.S., Science &mdash; Phoenix Community College</span>
+                <span class="entry-date"></span>
+            </div>
+        </section>
+
+        <!-- ── Experience ── -->
+        <section>
+            <h2 class="section-title">Experience</h2>
+
+            <div class="entry-header">
+                <span class="entry-title">IT Intern &mdash; Great Hearts Academy</span>
+                <span class="entry-date">Oct 2019 – May 2020</span>
+            </div>
             <ul>
-                <li>Built a REST API-based asynchronous task queue system with state management (queued, leased) across concurrent workers</li>
+                <li>Created fillable PDF forms for school staff using Adobe Acrobat, improving document workflow efficiency</li>
+                <li>Troubleshot computers, printers, and other technology across campus to minimize downtime</li>
+            </ul>
+
+            <div class="entry-header" style="margin-top:4px;">
+                <span class="entry-title"><a href="https://github.com/SilverCase-25th/async-task-engine" target="_blank">Project: Async Task Engine</a></span>
+                <span class="entry-date"></span>
+            </div>
+            <p class="entry-sub">Python &middot; FastAPI &middot; PostgreSQL &middot; Docker</p>
+            <ul>
+                <li>Built a REST API-based asynchronous task queue with state management (queued, leased) across concurrent workers</li>
                 <li>Integrated Prometheus metrics for real-time observability and webhook callbacks for task completion</li>
-                <li>Containerized with Docker Compose, enabling one-command local deployment with PostgreSQL and health checks</li>
+                <li>Containerized with Docker Compose for one-command local deployment with PostgreSQL and health checks</li>
             </ul>
-        </div>
 
-        <div class="project-entry">
-            <h4><a href="https://github.com/SilverCase-25th/Resume" target="_blank">Project: Resume Website</a></h4>
-            <p class="project-tech">HTML &bull; CSS &bull; JavaScript</p>
+            <div class="entry-header" style="margin-top:4px;">
+                <span class="entry-title"><a href="https://github.com/SilverCase-25th/Resume" target="_blank">Project: Resume Website</a></span>
+                <span class="entry-date"></span>
+            </div>
+            <p class="entry-sub">HTML &middot; CSS &middot; JavaScript</p>
             <ul>
-                <li>Built a personal resume as a static web page with semantic HTML, CSS, and a one-click PDF export via the browser Print API</li>
+                <li>Designed and built a personal resume as a static web page with semantic HTML, CSS, and one-click PDF export via the browser Print API</li>
             </ul>
-        </div>
 
-        <p style="font-size:0.87em; color:#888; margin-top:10px; margin-bottom:0;">
-            <em>Other: Crisis Therapist – La Frontera EMPACT (2023–Present) &nbsp;&bull;&nbsp; Private Investigator – Allied Universal (2023) &nbsp;&bull;&nbsp; Case Manager – AZ Dept. of Child Safety (2022)</em>
-        </p>
-    </section>
+            <p class="footnote">Additional: Crisis Therapist, La Frontera EMPACT (2023–Present) &nbsp;&middot;&nbsp; Private Investigator, Allied Universal (2023) &nbsp;&middot;&nbsp; Case Manager, AZ Dept. of Child Safety (2022)</p>
+        </section>
 
-    <section>
-        <h3>Skills</h3>
-        <ul>
-            <li><strong>Languages:</strong> Python (~3 yrs), C++ (~2 yrs), JavaScript (&gt;1 yr), HTML/CSS (&gt;1 yr)</li>
-            <li><strong>Frameworks &amp; Tools:</strong> FastAPI, Pytest, Prometheus, PostgreSQL, Docker, Git, Ubuntu, macOS, Windows</li>
-        </ul>
-    </section>
+        <!-- ── Skills ── -->
+        <section>
+            <h2 class="section-title">Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> Python (~3 yrs), C++ (~2 yrs), JavaScript (&gt;1 yr), HTML/CSS (&gt;1 yr)</li>
+                <li><strong>Frameworks &amp; Tools:</strong> FastAPI, Pytest, Prometheus, PostgreSQL, Docker, Git</li>
+                <li><strong>Platforms:</strong> Linux (Ubuntu), macOS, Windows</li>
+            </ul>
+        </section>
+
+    </div><!-- /.page -->
 </body>
 </html>
